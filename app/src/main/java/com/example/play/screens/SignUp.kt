@@ -25,38 +25,38 @@ class SignUp : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.datechange.setOnClickListener {
-            val calendar = Calendar.getInstance()
-            val year = calendar.get(Calendar.YEAR)
-            val month = calendar.get(Calendar.MONTH)
-            val day = calendar.get(Calendar.DAY_OF_MONTH)
-
-            val datePickerDialog = DatePickerDialog(
-                requireContext(),
-                R.style.CustomDatePickerDialog, // Apply custom style here
-                DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDay ->
-                    val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
-                    binding.datechange.setText(selectedDate)
-                },
-                year,
-                month,
-                day
-            )
-            datePickerDialog.show()
-        }
-
-        binding.checkBox.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked){
-                Toast.makeText(requireContext(), "I AGREE ON ${Calendar.getInstance().time}", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        binding.button.setOnClickListener {
-            if (binding.checkBox.isChecked){
-                Toast.makeText(requireContext(), "SIGNED UP SUCCESSFUL ON ${Calendar.getInstance().time}", Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(requireContext(), "TICK THE CHECK BOX", Toast.LENGTH_SHORT).show()
-            }
-        }
+//        binding.datechange.setOnClickListener {
+//            val calendar = Calendar.getInstance()
+//            val year = calendar.get(Calendar.YEAR)
+//            val month = calendar.get(Calendar.MONTH)
+//            val day = calendar.get(Calendar.DAY_OF_MONTH)
+//
+//            val datePickerDialog = DatePickerDialog(
+//                requireContext(),
+//                R.style.CustomDatePickerDialog, // Apply custom style here
+//                DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDay ->
+//                    val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+//                    binding.datechange.setText(selectedDate)
+//                },
+//                year,
+//                month,
+//                day
+//            )
+//            datePickerDialog.show()
+//        }
+//
+//        binding.checkBox.setOnCheckedChangeListener { _, isChecked ->
+//            if (isChecked){
+//                Toast.makeText(requireContext(), "I AGREE ON ${Calendar.getInstance().time}", Toast.LENGTH_SHORT).show()
+//            }
+//        }
+//
+//        binding.button.setOnClickListener {
+//            if (binding.checkBox.isChecked){
+//                Toast.makeText(requireContext(), "SIGNED UP SUCCESSFUL ON ${Calendar.getInstance().time}", Toast.LENGTH_SHORT).show()
+//            }else{
+//                Toast.makeText(requireContext(), "TICK THE CHECK BOX", Toast.LENGTH_SHORT).show()
+//            }
+//        }
     }
 }
