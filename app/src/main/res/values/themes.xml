@@ -7,7 +7,7 @@
         <item name="colorAccent">#FFFFFF</item>
     </style>
 
-    <style name="CustomDatePickerDialog" parent="Theme.MaterialComponents.Light.Dialog">
+    <style name="CustomDatePickerDialog" parent="Theme.MaterialComponents.DayNight.Dialog.Alert">
         <item name="android:datePickerStyle">@style/CustomDatePickerStyle</item>
     </style>
 
