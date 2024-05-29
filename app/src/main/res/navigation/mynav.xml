@@ -3,21 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mynav"
-    app:startDestination="@id/signUp">
+    app:startDestination="@id/welcomeScreen">
 
     <fragment
         android:id="@+id/signUp"
         android:name="com.example.play.screens.SignUp"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUp_to_contact"
+            app:destination="@id/contact" />
+    </fragment>
     <fragment
         android:id="@+id/splashScreen"
         android:name="com.example.play.screens.SplashScreen"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" />
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeScreen"
         android:name="com.example.play.screens.WelcomeScreen"
         android:label="fragment_welcome_screen"
-        tools:layout="@layout/fragment_welcome_screen" />
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/contact"
+        android:name="com.example.play.screens.Contact"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contact_to_password2"
+            app:destination="@id/password2" />
+    </fragment>
+    <fragment
+        android:id="@+id/password2"
+        android:name="com.example.play.screens.Password"
+        android:label="fragment_password"
+        tools:layout="@layout/fragment_password" />
 </navigation>
