@@ -25,5 +25,8 @@ class Contact : Fragment() {
         binding.button.setOnClickListener {
             findNavController().navigate(R.id.action_contact_to_password2)
         }
+        binding.imageView.setOnClickListener {
+            findNavController().navigate(R.id.action_contact_to_signUp)
+        }
     }
 }

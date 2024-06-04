@@ -11,30 +11,21 @@
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:fontFamily="sans-serif-medium"
         android:letterSpacing="0.03"
         android:text="Personal Details"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/firstname"
+        android:id="@+id/loginemail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -51,7 +42,7 @@
         app:startIconDrawable="@drawable/icons8_name_96___">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/firstnameedit"
+            android:id="@+id/loginemailedit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -60,7 +51,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lastname"
+        android:id="@+id/loginpassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -73,11 +64,11 @@
         app:hintTextColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstname"
+        app:layout_constraintTop_toBottomOf="@+id/loginemail"
         app:startIconDrawable="@drawable/icons8_name_96___">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lastnameedit"
+            android:id="@+id/loginpasswordedit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -127,7 +118,7 @@
         app:hintTextColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastname"
+        app:layout_constraintTop_toBottomOf="@+id/loginpassword"
         app:startIconDrawable="@drawable/icons8_gender_96___">
 
         <com.google.android.material.textfield.TextInputEditText
