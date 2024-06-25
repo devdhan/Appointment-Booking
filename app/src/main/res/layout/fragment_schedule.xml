@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".screens.Schedule">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                android:layout_width="226dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColor="#8696BB"
+                android:background="@drawable/schbtn"
+                android:text="Cancelled Schedule"
+                android:layout_margin="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:layout_width="226dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColor="#8696BB"
+                android:background="@drawable/schbtn"
+                android:text="Upcoming Schedule"
+                android:layout_margin="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:layout_width="226dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColor="#8696BB"
+                android:background="@drawable/schbtn"
+                android:text="Completed Schedule"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/euclid_circular_b_bold"
+                android:text="Dr. Joseph Brostito"
+                android:textColor="#0D1B34"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Dental Specialist"
+                android:textColor="#8696BB"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:id="@+id/linediv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/line_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <ImageView
+                android:id="@+id/calschedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/calendar_schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv" />
+
+            <TextView
+                android:id="@+id/scheduledate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Sunday, 12 June"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/calschedule"
+                app:layout_constraintTop_toTopOf="@+id/calschedule" />
+
+            <ImageView
+                android:id="@+id/clockschedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:src="@drawable/clock_schedule"
+                app:layout_constraintEnd_toStartOf="@id/clockdate"
+                app:layout_constraintTop_toTopOf="@id/clockdate" />
+
+            <TextView
+                android:id="@+id/clockdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="11:00 - 12:00 AM"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doc1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#8063B4FF"
+                android:fontFamily="@font/euclid_circular_b_medium"
+                android:lineHeight="15.4sp"
+                android:text="Details"
+                android:textColor="#4894FE"
+                android:textSize="14sp"
+                app:cornerRadius="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clockdate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/euclid_circular_b_bold"
+                android:text="Dr. Bessie Coleman"
+                android:textColor="#0D1B34"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView30"
+                app:layout_constraintTop_toTopOf="@+id/imageView30" />
+
+            <TextView
+                android:id="@+id/text30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Dental Specialist"
+                android:textColor="#8696BB"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView20"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <ImageView
+                android:id="@+id/linediv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/line_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+
+            <ImageView
+                android:id="@+id/calschedule1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/calendar_schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv1" />
+
+            <TextView
+                android:id="@+id/scheduledate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Sunday, 12 June"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/calschedule1"
+                app:layout_constraintTop_toTopOf="@+id/calschedule1" />
+
+            <ImageView
+                android:id="@+id/clockschedule1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:src="@drawable/clock_schedule"
+                app:layout_constraintEnd_toStartOf="@id/clockdate1"
+                app:layout_constraintTop_toTopOf="@id/clockdate1" />
+
+            <TextView
+                android:id="@+id/clockdate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="11:00 - 12:00 AM"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doc10"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#8063B4FF"
+                android:fontFamily="@font/euclid_circular_b_medium"
+                android:lineHeight="15.4sp"
+                android:text="Details"
+                android:textColor="#4894FE"
+                android:textSize="14sp"
+                app:cornerRadius="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clockdate1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/euclid_circular_b_bold"
+                android:text="Dr. Babe Didrikson"
+                android:textColor="#0D1B34"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView31"
+                app:layout_constraintTop_toTopOf="@+id/imageView31" />
+
+            <TextView
+                android:id="@+id/text31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Dental Specialist"
+                android:textColor="#8696BB"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+            <ImageView
+                android:id="@+id/linediv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/line_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+
+            <ImageView
+                android:id="@+id/calschedule2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/calendar_schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv2" />
+
+            <TextView
+                android:id="@+id/scheduledate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Sunday, 12 June"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/calschedule2"
+                app:layout_constraintTop_toTopOf="@+id/calschedule2" />
+
+            <ImageView
+                android:id="@+id/clockschedule2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:src="@drawable/clock_schedule"
+                app:layout_constraintEnd_toStartOf="@id/clockdate2"
+                app:layout_constraintTop_toTopOf="@id/clockdate2" />
+
+            <TextView
+                android:id="@+id/clockdate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="11:00 - 12:00 AM"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doc11"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#8063B4FF"
+                android:fontFamily="@font/euclid_circular_b_medium"
+                android:lineHeight="15.4sp"
+                android:text="Details"
+                android:textColor="#4894FE"
+                android:textSize="14sp"
+                app:cornerRadius="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clockdate2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/euclid_circular_b_bold"
+                android:text="Dr. Iman Syhair"
+                android:textColor="#0D1B34"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView32"
+                app:layout_constraintTop_toTopOf="@+id/imageView32" />
+
+            <TextView
+                android:id="@+id/text32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="General Doctor"
+                android:textColor="#8696BB"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+            <ImageView
+                android:id="@+id/linediv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/line_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+
+            <ImageView
+                android:id="@+id/calschedule3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/calendar_schedule"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv3" />
+
+            <TextView
+                android:id="@+id/scheduledate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="Sunday, 12 June"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/calschedule3"
+                app:layout_constraintTop_toTopOf="@+id/calschedule3" />
+
+            <ImageView
+                android:id="@+id/clockschedule3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8sp"
+                android:src="@drawable/clock_schedule"
+                app:layout_constraintEnd_toStartOf="@id/clockdate3"
+                app:layout_constraintTop_toTopOf="@id/clockdate3" />
+
+            <TextView
+                android:id="@+id/clockdate3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/euclid_circular_b_regular"
+                android:text="11:00 - 12:00 AM"
+                android:textColor="#8696BB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linediv3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doc13"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#8063B4FF"
+                android:fontFamily="@font/euclid_circular_b_medium"
+                android:lineHeight="15.4sp"
+                android:text="Details"
+                android:textColor="#4894FE"
+                android:textSize="14sp"
+                app:cornerRadius="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clockdate3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
