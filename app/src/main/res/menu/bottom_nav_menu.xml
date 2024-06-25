@@ -1,19 +1,24 @@
 <!-- bottom_menu.xml -->
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/home"
+        android:id="@+id/homeitem"
         android:icon="@drawable/home_2"
-        android:title="Home"/>
+        android:title="Home"
+        app:cnb_iconColor="#2196F3"/>
     <item
-        android:id="@+id/activity"
+        android:id="@+id/scheduleitem"
         android:icon="@drawable/calendar_icon"
-        android:title="Schedule"/>
+        android:title="Schedule"
+        app:cnb_iconColor="#2196F3"/>
     <item
-        android:id="@+id/favorites"
+        android:id="@+id/messageitem"
         android:icon="@drawable/message"
-        android:title="Message" />
+        android:title="Message"
+        app:cnb_iconColor="#2196F3" />
     <item
-        android:id="@+id/settings"
+        android:id="@+id/profileitem"
         android:icon="@drawable/profile"
-        android:title="Profile" />
+        android:title="Profile"
+        app:cnb_iconColor="#2196F3" />
 </menu>
