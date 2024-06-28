@@ -33,12 +33,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:textColor="#8696BB"
-<<<<<<< HEAD
                 app:cornerRadius="100dp"
                 app:backgroundTint="#FAFAFA"
-=======
-                android:background="@drawable/schbtn"
->>>>>>> origin/master
                 android:text="Cancelled Schedule"
                 android:layout_margin="5dp"/>
 
@@ -48,12 +44,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:textColor="#8696BB"
-<<<<<<< HEAD
                 android:backgroundTint="#8063B4FF"
                 app:cornerRadius="100dp"
-=======
-                android:background="@drawable/schbtn"
->>>>>>> origin/master
                 android:text="Upcoming Schedule"
                 android:layout_margin="5dp"/>
 
@@ -63,12 +55,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:textColor="#8696BB"
-<<<<<<< HEAD
                 app:cornerRadius="100dp"
                 app:backgroundTint="#FAFAFA"
-=======
-                android:background="@drawable/schbtn"
->>>>>>> origin/master
                 android:text="Completed Schedule"
                 android:layout_margin="5dp"/>
         </LinearLayout>
