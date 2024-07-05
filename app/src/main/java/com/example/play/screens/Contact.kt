@@ -22,7 +22,7 @@ class Contact : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.button.setOnClickListener {
+        binding.button4.setOnClickListener {
             findNavController().navigate(R.id.action_contact_to_password2)
         }
         binding.imageView.setOnClickListener {

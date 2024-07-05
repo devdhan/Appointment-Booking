@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mynav"
-    app:startDestination="@id/editProfile">
+    app:startDestination="@id/signUp">
 
     <fragment
         android:id="@+id/signUp"
@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_password2_to_contact"
             app:destination="@id/contact" />
+        <action
+            android:id="@+id/action_password2_to_homeDashboard"
+            app:destination="@id/homeDashboard" />
     </fragment>
     <fragment
         android:id="@+id/login"
@@ -72,10 +75,18 @@
         android:id="@+id/profile"
         android:name="com.example.play.screens.Profile"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
     <fragment
         android:id="@+id/editProfile"
         android:name="com.example.play.screens.EditProfile"
         android:label="fragment_edit_profile"
-        tools:layout="@layout/fragment_edit_profile" />
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfile_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
 </navigation>

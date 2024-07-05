@@ -25,5 +25,8 @@ class Password : Fragment() {
         binding.imageView.setOnClickListener {
             findNavController().navigate(R.id.action_password2_to_contact)
         }
+        binding.button4.setOnClickListener {
+            findNavController().navigate(R.id.action_password2_to_homeDashboard)
+        }
     }
 }

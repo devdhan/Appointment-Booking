@@ -26,7 +26,7 @@ class SignUp : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.dateofbirthedit.setOnClickListener {
+        binding.dateofbirthtext.setOnClickListener {
             val calendar = Calendar.getInstance()
             val year = calendar.get(Calendar.YEAR)
             val month = calendar.get(Calendar.MONTH)
@@ -37,7 +37,7 @@ class SignUp : Fragment() {
                 R.style.CustomDatePickerDialog,
                 DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDay ->
                     val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
-                    binding.dateofbirthedit.setText(selectedDate)
+                    binding.dateofbirthtext.setText(selectedDate)
                 },
                 year,
                 month,
@@ -46,7 +46,7 @@ class SignUp : Fragment() {
             datePickerDialog.show()
         }
 
-        binding.button.setOnClickListener {
+        binding.button4.setOnClickListener {
             findNavController().navigate(R.id.action_signUp_to_contact)
         }
     }
